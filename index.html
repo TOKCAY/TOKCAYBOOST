@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TOKCAY Sosmed Boost - Layanan Sosial Media Terpercaya</title>
+  <style>
+    /* Reset & basic */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #141e30, #243b55);
+      color: #f0f0f0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    /* Header */
+    header {
+      background: #1b2735;
+      padding: 50px 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    }
+    header h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #ffbf00;
+      text-shadow: 0 0 10px #ffbf00;
+      letter-spacing: 3px;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.25rem;
+      color: #cfd8dc;
+      font-weight: 500;
+      letter-spacing: 1px;
+      font-style: italic;
+    }
+    /* Container for main content */
+    main {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+      flex-grow: 1;
+    }
+    /* Menu Grid */
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+    .card {
+      background: #2e3b4e;
+      border-radius: 15px;
+      padding: 25px 30px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(255, 191, 0, 0.7);
+    }
+    .card h3 {
+      color: #ffbf00;
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+    }
+    .card p {
+      font-size: 1.05rem;
+      margin-bottom: 20px;
+      color: #d1d9e6;
+      line-height: 1.4;
+    }
+    .btn {
+      background: #ffbf00;
+      color: #1b2735;
+      font-weight: 700;
+      padding: 12px 25px;
+      border-radius: 30px;
+      display: inline-block;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(255, 191, 0, 0.7);
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #e6ac00;
+      box-shadow: 0 6px 18px rgba(230, 172, 0, 0.9);
+    }
+    /* Section Titles */
+    h2.section-title {
+      font-size: 2.5rem;
+      color: #ffbf00;
+      margin-bottom: 30px;
+      text-align: center;
+      letter-spacing: 2px;
+      text-shadow: 0 0 8px #ffbf00;
+    }
+    /* Kenapa Pilih Kami Box */
+    .why-choose {
+      background: #1b2735;
+      max-width: 800px;
+      margin: 0 auto 60px;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+    .why-choose ul {
+      list-style: none;
+      color: #d1d9e6;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      padding-left: 20px;
+      position: relative;
+    }
+    .why-choose ul li {
+      margin-bottom: 15px;
+      padding-left: 25px;
+      position: relative;
+      font-weight: 500;
+    }
+    .why-choose ul li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #ffbf00;
+      font-weight: 700;
+      font-size: 1.2rem;
+      top: 2px;
+    }
+    /* Testimoni Grid */
+    .testimoni-grid {
+      max-width: 900px;
+      margin: 0 auto 80px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+    .testimoni-card {
+      background: #2e3b4e;
+      padding: 25px 20px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      color: #d1d9e6;
+      font-style: italic;
+      position: relative;
+    }
+    .testimoni-card::before {
+      content: "“";
+      font-size: 3.5rem;
+      color: #ffbf00;
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      opacity: 0.15;
+      font-family: serif;
+    }
+    .testimoni-card strong {
+      display: block;
+      margin-top: 20px;
+      font-weight: 700;
+      color: #ffbf00;
+      font-style: normal;
+      text-align: right;
+      letter-spacing: 0.5px;
+    }
+    /* Footer */
+    footer {
+      background: #121b2a;
+      padding: 25px 15px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #a0a9b8;
+      box-shadow: inset 0 1px 5px rgba(255,255,255,0.05);
+    }
+    /* Responsive small tweaks */
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+      h2.section-title {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>TOKCAY SOSMED BOOST</h1>
+    <p>Layanan Followers, Views, Komentar dengan harga terjangkau & kualitas jempolan</p>
+  </header>
+
+  <main>
+    <section>
+      <h2 class="section-title">Layanan Kami</h2>
+      <div class="menu-grid">
+
+        <div class="card">
+          <h3>Followers TikTok</h3>
+          <p>Harga mulai Rp5.000. Tambah pengikut nyata, cepat dan aman.</p>
+          <button class="btn" onclick="pesanWA('Followers TikTok')">Pesan Sekarang</button>
+        </div>
+
+        <div class="card">
+          <h3>Followers Instagram</h3>
+          <p>Harga mulai Rp10.000. Followers real dan aktif, aman untuk bisnis.</p>
+          <button class="btn" onclick="pesanWA('Followers Instagram')">Pesan Sekarang</button>
+        </div>
+
+        <div class="card">
+          <h3>Pengikut Facebook</h3>
+          <p>Pilih Profil atau Halaman, mulai Rp10.000. Penambahan pengikut berkualitas.</p>
+          <button class="btn" onclick="pesanWA('Pengikut Facebook Profil/Halaman')">Pesan Sekarang</button>
+        </div>
+
+        <div class="card">
+          <h3>Subscribe YouTube</h3>
+          <p>Harga mulai Rp15.000. Naikkan subscriber channel-mu dengan mudah.</p>
+          <button class="btn" onclick="pesanWA('Subscribe YouTube')">Pesan Sekarang</button>
+        </div>
+
+        <div class="card">
+          <h3>Views (TikTok, Instagram, Facebook, YouTube, dll)</h3>
+          <p>Harga mulai Rp5.000. Tingkatkan views agar kontenmu makin viral.</p>
+          <button class="btn" onclick="pesanWA('Views')">Pesan Sekarang</button>
+        </div>
+
+        <div class="card">
+          <h3>Like (TikTok, Instagram, Facebook, YouTube, dll)</h3>
+          <p>Harga mulai Rp5.000. Like banyak untuk dorong engagement kamu.</p>
+          <button class="btn" onclick="pesanWA('Like')">Pesan Sekarang</button>
+        </div>
+
+        <div class="card">
+          <h3>Komentar (TikTok, Instagram, Facebook, YouTube, dll)</h3>
+          <p>Harga mulai Rp10.000. Komentar natural dan sesuai kebutuhanmu.</p>
+          <button class="btn" onclick="pesanWA('Komentar')">Pesan Sekarang</button>
+        </div>
+
+        <div class="card">
+          <h3>Save / Favorit (TikTok, Instagram, Facebook, YouTube, dll)</h3>
+          <p>Harga mulai Rp5.000. Bantu kontenmu disimpan dan disukai banyak orang.</p>
+          <button class="btn" onclick="pesanWA('Save / Favorit')">Pesan Sekarang</button>
+        </div>
+
+        <div class="card">
+          <h3>Share (TikTok, Instagram, Facebook, YouTube, dll)</h3>
+          <p>Harga mulai Rp5.000. Tingkatkan sharing untuk jangkauan lebih luas.</p>
+          <button class="btn" onclick="pesanWA('Share')">Pesan Sekarang</button>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="why-choose">
+      <h2 class="section-title">Kenapa Pilih Kami?</h2>
+      <ul>
+        <li>Proses cepat dan aman, maksimal 1x24 jam pengiriman.</li>
+        <li>Harga mulai dari Rp5.000, cocok untuk semua kalangan dan budget.</li>
+        <li>Support semua platform populer: TikTok, Instagram, Facebook, YouTube, Shopee, dan lainnya.</li>
+        <li>Customer service ramah dan responsif siap membantu kamu 24/7.</li>
+        <li>Privasi & keamanan data pelanggan terjamin dan tidak bocor.</li>
+        <li>Custom order bisa, sesuai kebutuhan khusus kamu.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="section-title">Testimoni Pelanggan</h2>
+      <div class="testimoni-grid">
+        <div class="testimoni-card">
+          “Followers TikTok cepat banget masuk, konten aku langsung nambah exposure!”<br/>
+          <strong>@dindaa_23</strong>
+        </div>
+        <div class="testimoni-card">
+          “Layanan Instagram Followers-nya real dan aman buat branding bisnis saya.”<br/>
+          <strong>@fashionbeat.id</strong>
+        </div>
+        <div class="testimoni-card">
+          “Komentar customnya natural dan membantu banget meningkatkan engagement!”<br/>
+          <strong>@videolucu22</strong>
+        </div>
+        <div class="testimoni-card">
+          “Order Subscribe YouTube mudah, hasil sesuai harapan dan cepat!”<br/>
+          <strong>@youtube_channel01</strong>
+        </div>
+        <div class="testimoni-card">
+          “Supportnya cepat dan sangat ramah, sangat puas dengan pelayanan TOKCAY!”<br/>
+          <strong>@jualanmurah88</strong>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 TOKCAY. Jasa Sosmed Aman & Terpercaya.<br/>
+    Hubungi kami via WhatsApp: <a href="https://wa.me/6285797112868" target="_blank" style="color:#ffbf00;">0857-9711-2868</a>
+  </footer>
+
+  <script>
+    function pesanWA(layanan) {
+      const pesan = `Halo TOKCAY! Saya mau order layanan ${layanan}. Mohon info lebih lanjut ya. Terima kasih!`;
+      const nomorWA = '6285797112868';
+      const urlWA = `https://wa.me/${nomorWA}?text=${encodeURIComponent(pesan)}`;
+      window.open(urlWA, '_blank');
+    }
+  </script>
+</body>
+</html>
